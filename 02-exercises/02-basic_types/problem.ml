@@ -186,4 +186,4 @@ let%test "Testing float_average..." =
 
 
 let%test "Testing float_average..." =
-   Float.(=) (float_average 6. 6.) 9.
+   Float.(=) (float_average 6. 6.) 6.
