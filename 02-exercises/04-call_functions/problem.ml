@@ -20,8 +20,16 @@ let () =
    function invocations using parentheses, then using let bindings. *)
 let average x y = (half (add x y));;
 
+let average_binding x y =
+  let added = add x y in
+  let halved = half added in
+  halved
+
 let%test "Testing average..."  =
   Int.(=) 5 (average 5 5)
 
 let%test "Testing average..." =
   Int.(=) 75 (average 50 100)
+
+let%test "Testing average..." =
+  Int.(=) 3 (average_binding 3 3)
