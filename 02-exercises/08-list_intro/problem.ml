@@ -41,6 +41,7 @@ let%test "Testing sum..." = Int.( = ) 0 (sum [])
 let%test "Testing sum..." = Int.( = ) 55 (sum [ 55 ])
 let%test "Testing sum..." = Int.( = ) 0 (sum [ 5; -5; 1; -1 ])
 let%test "Testing sum..." = Int.( = ) 12 (sum [ 5; 5; 1; 1 ])
+let%test "Testing sum..." = Int.( = ) 18 (sum (5 :: 1 :: 8 :: 4  :: []))
 
 (* Now write a function to multiply together the elements of a list. *)
 let rec product xs = 
@@ -53,3 +54,4 @@ let%test "Testing product..." = Int.equal 1 (product [])
 let%test "Testing product..." = Int.equal 55 (product [ 55 ])
 let%test "Testing product..." = Int.equal 25 (product [ 5; -5; 1; -1 ])
 let%test "Testing product..." = Int.equal 25 (product [ 5; 5; 1; 1 ])
+let%test "Testing product..." = Int.equal 160 (product (5 :: 1 :: 8 :: 4  :: []))
